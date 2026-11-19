@@ -1,4 +1,5 @@
-[README.md](https://github.com/user-attachments/files/35117379/README.md)
+[README (1).md](https://github.com/user-attachments/files/35117518/README.1.md)
+
 # Monitor de Indicadores BCB
 
 Automação em Python que acompanha indicadores econômicos brasileiros. A cada execução, o script consulta a API pública SGS do Banco Central do Brasil e gera um painel visual com cards, gráfico e resumo automático.
@@ -76,8 +77,8 @@ No início do script:
 
 ## Limitações
 
-- Selic diária e Selic mensal/anual têm referências diferentes: a diária é de um dia útil e as outras se referem a um mês ou a um ano. O painel exibe a referência de cada valor.
-- O IPCA é divulgado mensalmente, então muda no máximo uma vez por mês.
+- As séries da Selic têm referências diferentes: a diária (% a.d.) e a anualizada (% a.a., base 252) são de um dia útil, enquanto a mensal (% a.m.) é o acumulado de um mês. O painel exibe a data ou o mês de referência quando aplicável.
+- O IPCA (mensal e acumulado em 12 meses) é divulgado pelo IBGE uma vez por mês, então só muda quando um novo mês é divulgado. O acumulado em 12 meses é uma janela móvel, não o ano calendário.
 - Dias sem divulgação (fins de semana e feriados) não aparecem no gráfico.
 
 ## Fonte dos dados
